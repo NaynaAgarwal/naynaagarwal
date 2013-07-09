@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+ has_many :posts
  validates :firstname, :lastname, presence: true
  validates :password, length:{in: 6..40}
 
